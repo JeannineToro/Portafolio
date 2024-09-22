@@ -1,0 +1,47 @@
+.cabecera{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navegacion__lista{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+
+
+/*=============================================
+=            TABLET - MOVIL            =
+=============================================*/
+
+@media (max-width:1024px) and (min-width: 320px){
+    
+    /*----------  MENÚ  ----------*/
+
+    .navegacion__elemento:nth-child(1), .navegacion__elemento:nth-child(2), .navegacion__elemento:nth-child(3),
+    .navegacion__elemento:nth-child(4),
+    .navegacion__elemento:nth-child(5){
+        display: none;
+    }
+    
+}
+
+/*=====  End of TABLET - MOVIL  ======*/
+
+
+
+
+/*=============================================
+=            TABLET            =
+=============================================*/
+
+@media (max-width:1024px) and (min-width: 768px){
+    
+    
+    
+}
+
+/*=====  End of TABLET  ======*/
+
