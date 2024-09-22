@@ -23,7 +23,7 @@
     color: var(--verde-medio-oscuro);
 }
 
-.navegacion__elemento:hover{
+.navegacion__elemento:hover, .redes__img:hover{
     box-shadow: 0 3px 0 var(--verde-medio-oscuro);
     transition: all 0.3s ease;
 }
@@ -54,6 +54,45 @@
 }
 
 
+
+
+
+/*=============================================
+=            TABLET            =
+=============================================*/
+
+@media (max-width:1024px) and (min-width: 768px){
+
+    .navegacion__elemento:nth-child(6){
+        font-size: 1.7rem;
+    }
+
+    .presentacion{
+        margin: 100px 10px;
+    }
+
+    .presentacion__titulo{
+        font-size: 2rem;
+    }
+
+    .presentacion__subtitulo, .redes{
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+        margin-top: 17px;
+    }
+
+    .redes__img{
+        font-size: 1.4rem;
+    }
+}
+
+
+/*=====  End of TABLET  ======*/
+
+
+
+
+
 /*=============================================
 =            MOVIL            =
 =============================================*/
@@ -62,6 +101,27 @@
 @media (max-width:480px) and (min-width: 320px){
     .cabecera__logo{
         height: 40px;
+    }
+
+    .navegacion__elemento:nth-child(6){
+        font-size: 1.5rem;
+    }
+
+    .presentacion{
+        margin: 60px 15px;
+    }
+
+    .presentacion__titulo{
+        font-size: 1.8rem;
+        margin-top: 20px;
+    }
+
+    .presentacion__subtitulo{
+        font-size: 1.3rem;
+    }
+
+    .redes__img{
+        font-size: 1.1rem;
     }
 }
 
