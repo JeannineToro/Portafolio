@@ -3,7 +3,7 @@
     --color-texto: #137047;
     --azul-oscuro: #243D44;
     --azul-medio: #167A8B;
-    -verde-claro: #2DEA8F;
+    --verde-claro: #2DEA8F;
     --verde-medio-oscuro: #24B273;
 }
 
@@ -20,11 +20,37 @@
 
 .navegacion__elemento:nth-child(6){
     font-weight: bold;
+    color: var(--verde-medio-oscuro);
 }
 
 .navegacion__elemento:hover{
     box-shadow: 0 3px 0 var(--verde-medio-oscuro);
     transition: all 0.3s ease;
+}
+
+.presentacion{
+    margin: 150px auto;
+}
+
+.presentacion__foto{
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+}
+
+.presentacion__titulo{
+    font-size: 2.6rem;
+    font-weight: bold;
+    color: var(--azul-oscuro);
+}
+
+.presentacion__subtitulo, .redes{
+    margin-top: 30px;
+    font-weight: lighter;
+}
+
+.redes__img{
+    font-size: 0.9rem;
 }
 
 

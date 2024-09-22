@@ -10,6 +10,23 @@
     gap: 15px;
 }
 
+.presentacion{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0;
+}
+
+.presentacion__contenedor{
+    flex-basis: 50%;
+}
+
+.redes{
+    display: flex;
+    gap: 20px;
+}
+
 
 
 /*=============================================
