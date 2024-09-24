@@ -1,3 +1,6 @@
+
+/*----------  MENU  ----------*/
+
 .cabecera{
     display: flex;
     align-items: center;
@@ -10,6 +13,10 @@
     gap: 15px;
 }
 
+
+/*----------  SECCION PRESENTACION  ----------*/
+
+
 .presentacion{
     display: flex;
     flex-direction: row-reverse;
@@ -19,7 +26,7 @@
 }
 
 .presentacion__contenedor{
-    flex-basis: 50%;
+    flex-basis: 60%;
 }
 
 .redes{

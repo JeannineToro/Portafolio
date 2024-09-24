@@ -8,6 +8,8 @@
 }
 
 
+/*----------  MENU  ----------*/
+
 .cabecera {
     padding: 1rem;
     background-color: #ffffff;
@@ -27,6 +29,9 @@
     box-shadow: 0 3px 0 var(--verde-medio-oscuro);
     transition: all 0.3s ease;
 }
+
+
+/*----------  SECCION PRESENTACION  ----------*/
 
 .presentacion{
     margin: 150px auto;
@@ -54,7 +59,26 @@
 }
 
 
+/*----------  SECCION SOBRE MI  ----------*/
 
+.sobre-mi{
+    background-color: #2dea8f1a;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.sobre-mi__texto{
+    width: 65%;
+    margin: 15px 170px;
+}
+
+.sobre-mi__titulo{
+    font-size: 1.7rem;
+    color: var(--azul-oscuro);
+    font-weight: bold;
+    padding-top: 30px;
+    margin: 30px 170px;
+}
 
 
 /*=============================================
@@ -83,6 +107,18 @@
 
     .redes__img{
         font-size: 1.4rem;
+    }
+
+    .sobre-mi__texto{
+        width: 93%;
+        margin: 15px 30px;
+        font-size: 1.3rem;
+    }
+
+    .sobre-mi__titulo{
+        font-size: 1.9rem;
+        padding-top: 30px;
+        margin: 30px 30px;
     }
 }
 
@@ -122,6 +158,18 @@
 
     .redes__img{
         font-size: 0.8rem;
+    }
+
+    .sobre-mi__texto{
+        width: 93%;
+        margin: 0px 15px;
+        font-size: 1.4rem;
+    }
+
+    .sobre-mi__titulo{
+        font-size: 1.9rem;
+        padding-top: 30px;
+        margin: 20px 15px;
     }
 }
 
