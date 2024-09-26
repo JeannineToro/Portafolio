@@ -80,6 +80,96 @@
     margin: 30px 170px;
 }
 
+/*----------  SECCIÓN HABILIDADES  ----------*/
+
+.habilidades__titulo{
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--azul-oscuro);
+    font-weight: bold;
+    margin-top: 100px;
+}
+
+.habilidades__lista{
+    margin: 60px 400px;
+}
+
+.habilidades__elemento{
+    margin-bottom: 20px;
+}
+
+.habilidades__nombre{
+    color: #fff;
+    padding-top: 7px;
+    padding-left: 10px;
+    height: 23px;
+    width: 90px;
+}
+
+.habilidades__nombre-html{
+    background-color: rgb(186, 52, 4);
+}
+
+.habilidades__nombre-css{
+    background-color: #12616f;
+}
+
+.habilidades__nombre-javascript{
+    background-color: rgb(137, 137, 0);
+}
+
+.habilidades__nombre-php{
+    background-color: #0a3841;
+}
+
+.habilidades__nombre-react{
+    background-color: rgb(46, 21, 138);
+}
+
+
+.habilidades__progress{
+    width: 100%;
+    height: 30px;
+    background-color: gray;
+    border-radius: 5px;
+}
+
+.habilidades__progress .progress-bar{
+    width: 0%;
+    opacity: 0;
+    height: 100%;
+    border-radius: 5px;
+    position: relative;
+    transition: all 3s;
+}
+
+.progress__bar-html{
+    background-color: rgb(229, 88, 37);
+}
+
+.progress__bar-css{
+    background-color: var(--azul-medio);
+}
+
+.progress__bar-javascript{
+    background-color: rgb(193, 193, 8);
+}
+
+.progress__bar-php{
+    background-color: #0f5f6f;
+}
+
+.progress__bar-react{
+    background-color: rgb(86, 40, 253);
+}
+
+.habilidades__porcentaje{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+}
+
 
 /*=============================================
 =            TABLET            =
@@ -119,6 +209,10 @@
         font-size: 1.9rem;
         padding-top: 30px;
         margin: 30px 30px;
+    }
+
+    .habilidades__lista{
+        margin: 60px 100px;
     }
 }
 
@@ -170,6 +264,10 @@
         font-size: 1.9rem;
         padding-top: 30px;
         margin: 20px 15px;
+    }
+
+    .habilidades__lista{
+        margin: 60px 30px;
     }
 }
 
