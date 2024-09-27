@@ -61,7 +61,7 @@
 
 /*----------  SECCION SOBRE MI  ----------*/
 
-.sobre-mi{
+.sobre-mi, .formacion{
     background-color: #2dea8f1a;
     padding-top: 20px;
     padding-bottom: 30px;
@@ -82,12 +82,12 @@
 
 /*----------  SECCIÓN HABILIDADES  ----------*/
 
-.habilidades__titulo, .aficiones__titulo{
+.habilidades__titulo, .aficiones__titulo, .formacion__titulo{
     text-align: center;
     font-size: 1.4rem;
     color: var(--azul-oscuro);
     font-weight: bold;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .habilidades__lista{
@@ -173,12 +173,16 @@
 
 /*----------  SECCIÓN AFICIONES  ----------*/
 
+.aficiones{
+    margin-bottom: 150px;
+}
+
 .aficiones__icono{
     width: 80px;
 }
 
 .aficiones__elemento{
-    background-color: #64f4ae52;
+    background-color: #d3fbe852;
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -192,6 +196,50 @@
 .aficiones__nombre{
     width: 100px;
     text-align: center;
+}
+
+
+/*----------  SECCIÓN-FORMACIÓN  ----------*/
+
+.formacion__titulo{
+    margin-top: 50px;
+}
+
+.formacion__lista{
+    margin-top: 100px;
+}
+
+.formacion__elemento{
+    background-color: #F9FFFA;
+    width: 370px;
+    height: 200px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formacion__elemento:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.formacion__icono{
+    width: 180px;
+}
+
+.formacion__elemento:nth-child(3) .formacion__icono{
+    width: 100px;
+}
+
+.formacion__nombre{
+    font-weight: bolder;
+}
+
+.formacion__detalle{
+    text-align: center;
+    margin-top: 10px;
+    font-size: .9rem;
+    font-weight: bolder;
+    color: #595858;
 }
 
 
@@ -241,6 +289,10 @@
 
     .aficiones__lista{
         margin: 10px 100px;
+    }
+
+    .formacion__elemento{
+        width: 500px;
     }
 }
 

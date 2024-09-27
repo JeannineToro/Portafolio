@@ -52,6 +52,20 @@
     gap: 10px;
 }
 
+/*----------  SECCIÓN FORMACIÓN  ----------*/
+
+.formacion__lista{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.formacion__elemento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
 
 
 /*=============================================
@@ -69,6 +83,12 @@
     }
 
     .aficiones__lista{
+        gap: 30px;
+    }
+
+    .formacion__lista{
+        flex-direction: column;
+        align-items: center;
         gap: 30px;
     }
     
