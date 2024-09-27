@@ -82,7 +82,7 @@
 
 /*----------  SECCIÓN HABILIDADES  ----------*/
 
-.habilidades__titulo{
+.habilidades__titulo, .aficiones__titulo{
     text-align: center;
     font-size: 1.4rem;
     color: var(--azul-oscuro);
@@ -171,6 +171,30 @@
 }
 
 
+/*----------  SECCIÓN AFICIONES  ----------*/
+
+.aficiones__icono{
+    width: 80px;
+}
+
+.aficiones__elemento{
+    background-color: #64f4ae52;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--verde-medio-oscuro);
+}
+
+.aficiones__elemento:hover{
+    box-shadow: 5px 5px 15px #302f2f;
+}
+
+.aficiones__nombre{
+    width: 100px;
+    text-align: center;
+}
+
+
 /*=============================================
 =            TABLET            =
 =============================================*/
@@ -213,6 +237,10 @@
 
     .habilidades__lista{
         margin: 60px 100px;
+    }
+
+    .aficiones__lista{
+        margin: 10px 100px;
     }
 }
 

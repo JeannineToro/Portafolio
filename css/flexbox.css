@@ -35,6 +35,24 @@
 }
 
 
+/*----------  SECCIÓN AFICIONES  ----------*/
+
+.aficiones__lista{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.aficiones__elemento{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
 
 /*=============================================
 =            TABLET - MOVIL            =
@@ -48,6 +66,10 @@
     .navegacion__elemento:nth-child(4),
     .navegacion__elemento:nth-child(5){
         display: none;
+    }
+
+    .aficiones__lista{
+        gap: 30px;
     }
     
 }
