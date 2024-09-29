@@ -1,3 +1,8 @@
+
+/*----------  ANIMACIÓN HABILIDADES  ----------*/
+
+
+
 const skillsSection = document.getElementById('habilidades');
 
 const progressBars = document.querySelectorAll('.progress-bar');
@@ -25,5 +30,23 @@ window.addEventListener('scroll', ()=>{
         showProgress();
     }else{
         hideProgress();
+    }
+});
+
+
+/*----------  ANIMACIÓN PROYECTOS  ----------*/
+
+
+const proyectoContainer = document.getElementById('proyectos');
+const proyectoIndividual = proyectoContainer.querySelectorAll('.proyectos__individual');
+
+window.addEventListener('scroll', ()=>{
+    const scrollTop = window.scrollY;
+    const proyectoTop = proyectoContainer.offsetTop;
+
+    if (scrollTop >= proyectoTop - 450) {
+        proyectoIndividual.forEach(element=>{
+            element.classList.add('visible');
+        });
     }
 });
