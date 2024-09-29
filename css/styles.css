@@ -82,7 +82,7 @@
 
 /*----------  SECCIÓN HABILIDADES  ----------*/
 
-.habilidades__titulo, .aficiones__titulo, .formacion__titulo, .proyectos__titulo{
+.habilidades__titulo, .aficiones__titulo, .formacion__titulo, .proyectos__titulo, .contacto__titulo{
     text-align: center;
     font-size: 1.4rem;
     color: var(--azul-oscuro);
@@ -307,6 +307,100 @@
 }
 
 
+
+/*----------  SECCIÓN CONTACTO  ----------*/
+
+.contacto{
+    background-color: #2dea8f1a;
+    height: 790px;
+}
+
+.contacto__titulo{
+    padding-top: 90px;
+}
+
+.contacto__descripcion{
+    text-align: center;
+}
+
+.contacto__descripcion--primero{
+    margin-top: 50px;
+}
+
+.contacto__formulario{
+    width: 50%;
+    margin: 50px auto;
+}
+
+.contacto__campo{
+    width: 70%;
+}
+
+.contacto__campo{
+    position: relative;
+}
+
+.contacto__campo .contacto__input{
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 18px;
+    border: 2px solid #fff;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    color: #000;
+    outline: none;
+}
+
+.contacto__campo .contacto__label{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #575757;
+    pointer-events: none;
+    transition: .3s;
+}
+
+.contacto__input:focus, .contacto__campo--textarea:focus{
+    border: 2px solid var(--verde-claro);
+}
+
+.contacto__input:focus ~ .contacto__label,
+.contacto__input:valid ~ .contacto__label{
+    top: 0;
+    font-size: .9rem;
+    padding: 0 15px;
+    border-radius: 5px;
+    color: var(--color-fondo);
+    background-color: var(--color-texto);
+}
+
+.contacto__campo--textarea{
+    padding: 8px;
+    height: 180px;
+    margin-left: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+.contacto__boton{
+    padding: 10px;
+    width: 150px;
+    background-color: var(--verde-medio-oscuro);
+    border: 2px solid var(--verde-medio-oscuro);
+    color: #fff;
+    cursor: pointer;
+}
+
+.contacto__boton:hover{
+    transition: background-color .5s ease-in-out;
+    background-color: #fff;
+    color: #000;
+}
+
+
 /*=============================================
 =            TABLET - MOVIL            =
 =============================================*/
@@ -319,6 +413,20 @@
 
     .proyectos__descripcion{
         font-size: 1.1rem;
+    }
+
+    .contacto__descripcion{
+        text-align: left;
+        margin-left: 20px;
+        font-size: 1.4rem;
+    }
+
+    .contacto__formulario{
+        width: 100%;
+    }
+
+    .contacto__campo{
+        width: 80%;
     }
 }
 

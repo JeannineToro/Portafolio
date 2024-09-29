@@ -80,6 +80,17 @@
 
 
 
+/*----------  SECCIÓN CONTACTO  ----------*/
+
+.contacto__formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
 /*=============================================
 =            TABLET - MOVIL            =
 =============================================*/
