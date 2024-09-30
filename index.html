@@ -199,19 +199,25 @@
             <p class="contacto__descripcion">Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.</p>
             <form class="contacto__formulario">
                 <div class="contacto__campo">
-                    <input class="contacto__input" type="text" required spellcheck="false">
+                    <input id="contacto__nombre" class="contacto__input" type="text" required spellcheck="false">
                     <label class="contacto__label">Nombre</label>
                 </div>
+                <div class="input__mensaje input__mensaje--nombre"></div>
                 <div class="contacto__campo">
-                    <input class="contacto__input" type="email" required spellcheck="false">
+                    <input id="contacto__email" class="contacto__input" type="email" required spellcheck="false">
                     <label class="contacto__label">E-mail</label>
                 </div>
+                <div class="input__mensaje input__mensaje--email"></div>
                 <div class="contacto__campo">
-                    <input class="contacto__input" type="text" required spellcheck="false">
+                    <input id="contacto__asunto" class="contacto__input" type="text" required spellcheck="false">
                     <label class="contacto__label">Asunto</label>
                 </div>
-                <textarea class="contacto__campo contacto__campo--textarea" placeholder="Mensaje"></textarea>
-                <button class="contacto__boton" type="submit">Enviar</button>
+                <div class="input__mensaje input__mensaje--asunto"></div>
+                <textarea id="contacto__mensaje" class="contacto__campo contacto__campo--textarea" placeholder="Mensaje"></textarea>
+
+                <span class="contacto__info"><div class="signo">!</div> Debes llenar todos los campos</span>
+                <div class="contacto__mensaje--error"></div>
+                <button id="contacto__boton" class="contacto__boton" type="submit" disabled>Enviar</button>
             </form>
         </section>
     </main>

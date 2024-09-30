@@ -312,7 +312,7 @@
 
 .contacto{
     background-color: #2dea8f1a;
-    height: 790px;
+    height: 840px;
 }
 
 .contacto__titulo{
@@ -385,6 +385,32 @@
     outline: none;
 }
 
+.signo{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: var(--verde-claro);
+    border-radius: 50%;
+    color: #000;
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.contacto__info{
+    font-size: .8rem;
+}
+
+.input__mensaje{
+    color: red;
+    font-size: 16px;
+    display: none;
+}
+
+.input__mensaje--nombre.visible, .input__mensaje--email.visible, .input__mensaje--asunto.visible{
+    display: block;
+}
+
 .contacto__boton{
     padding: 10px;
     width: 150px;
@@ -394,7 +420,12 @@
     cursor: pointer;
 }
 
-.contacto__boton:hover{
+.contacto__boton:disabled{
+    background-color: #90cfb3;
+    cursor:not-allowed;
+}
+
+.contacto__boton:enabled:hover{
     transition: background-color .5s ease-in-out;
     background-color: #fff;
     color: #000;
@@ -427,6 +458,10 @@
 
     .contacto__campo{
         width: 80%;
+    }
+
+    .contacto__info{
+        font-size: 1.1rem;
     }
 }
 
