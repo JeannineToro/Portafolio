@@ -1,7 +1,4 @@
-
 /*----------  ANIMACIÓN HABILIDADES  ----------*/
-
-
 
 const skillsSection = document.getElementById('habilidades');
 
@@ -34,6 +31,7 @@ window.addEventListener('scroll', ()=>{
 });
 
 
+
 /*----------  ANIMACIÓN PROYECTOS  ----------*/
 
 
@@ -53,7 +51,6 @@ window.addEventListener('scroll', ()=>{
 
 
 
-
 /*----------  VALIDACIÓN DE FORMULARIO  ----------*/
 
 const nombre = document.getElementById('contacto__nombre');
@@ -64,6 +61,10 @@ const boton = document.getElementById('contacto__boton');
 const mensajeErrorNombre = document.querySelector('.input__mensaje--nombre');
 const mensajeErrorEmail = document.querySelector('.input__mensaje--email');
 const mensajeErrorAsunto = document.querySelector('.input__mensaje--asunto');
+const contadorCaracteres = document.getElementById('contador--caracteres');
+
+
+/*----------  HABILITAR BOTON AL NO TENER CAMPPOS VACÍOS  ----------*/
 
 const habilitarBoton = ()=>{
     
@@ -95,35 +96,63 @@ asunto.addEventListener("keyup", habilitarBoton);
 mensaje.addEventListener("keyup", habilitarBoton);
 
 
-nombre.addEventListener('input', ()=>{
-    if (nombre.value.length > 50) {
-        mensajeErrorNombre.textContent = 'Máximo 50 caracteres';
-        mensajeErrorNombre.classList.add('visible');
-    }else{
-        mensajeErrorNombre.textContent = '';
-        mensajeErrorNombre.classList.remove('visible');
-    }
-});
+
+/*----------  VALIDACIÓN DE LOS CAMPOS  ----------*/
 
 
-asunto.addEventListener('input', ()=>{
-    if (asunto.value.length > 50) {
-        mensajeErrorAsunto.textContent = 'Máximo 50 caracteres';
-        mensajeErrorAsunto.classList.add('visible');
-    }else{
-        mensajeErrorAsunto.textContent = '';
-        mensajeErrorAsunto.classList.remove('visible');
-    }
-});
 
-email.addEventListener('input', ()=>{
+const validarCampo = (input, error)=>{
+    const tipoCampo = input.dataset.tipo;
 
-    const correoRegex = /^[a-zA-Z0-9.%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/;
-    if (!correoRegex.test(email.value)) {
-        mensajeErrorEmail.textContent = 'Correo electrónico inválido';
-        mensajeErrorEmail.classList.add('visible');
-    }else{
-        mensajeErrorEmail.textContent = '';
-        mensajeErrorEmail.classList.remove('visible');
-    }
-});
+    input.addEventListener('input', ()=>{
+        switch(tipoCampo){
+            case 'nombre':
+                if (input.value.length > 50) {
+                    error.textContent = 'Máximo 50 caracteres';
+                    error.classList.add('visible');
+                }else{
+                    error.textContent = '';
+                    error.classList.remove('visible');
+                }
+            break;
+            case 'asunto':
+                if (input.value.length > 50) {
+                    error.textContent = 'Máximo 50 caracteres';
+                    error.classList.add('visible');
+                }else{
+                    error.textContent = '';
+                    error.classList.remove('visible');
+                }
+            break;
+
+            case 'email':
+                const correoRegex = /^[a-zA-Z0-9.%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/;
+                if (!correoRegex.test(input.value)) {
+                    error.textContent = 'Correo electrónico inválido';
+                    error.classList.add('visible');
+                }else{
+                    error.textContent = '';
+                    error.classList.remove('visible');
+                }
+            break;
+
+            case 'mensaje':
+                const longitud = input.value.length;
+                error.textContent = `${longitud}/300`;
+
+                if (longitud > 300) {
+                    input.value = input.value.substring(0,300);
+                    error.textContent = 'solo 300 caracteres';
+                    error.classList.add('cambioColor');
+                }else{
+                    error.classList.remove('cambioColor');
+                }
+
+        }
+    });
+}
+
+validarCampo(nombre, mensajeErrorNombre);
+validarCampo(asunto, mensajeErrorAsunto);
+validarCampo(email, mensajeErrorEmail);
+validarCampo(mensaje, contadorCaracteres);

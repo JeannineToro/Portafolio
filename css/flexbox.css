@@ -35,6 +35,7 @@
 }
 
 
+
 /*----------  SECCIÓN AFICIONES  ----------*/
 
 .aficiones__lista{
@@ -52,6 +53,8 @@
     gap: 10px;
 }
 
+
+
 /*----------  SECCIÓN FORMACIÓN  ----------*/
 
 .formacion__lista{
@@ -65,6 +68,8 @@
     align-items: center;
     justify-content: space-around;
 }
+
+
 
 /*----------  SECCIÓN PROYECTOS  ----------*/
 
@@ -80,6 +85,7 @@
 
 
 
+
 /*----------  SECCIÓN CONTACTO  ----------*/
 
 .contacto__formulario{
@@ -88,6 +94,8 @@
     align-items: center;
     gap: 30px;
 }
+
+
 
 
 
@@ -126,24 +134,27 @@
     
 }
 
+
 /*=====  End of TABLET - MOVIL  ======*/
 
 
 
 
 /*=============================================
-=            TABLET            =
+=            Tablet            =
 =============================================*/
 
 @media (max-width:1024px) and (min-width: 768px){
-    
+
     .presentacion__contenedor{
         flex-basis: 70%;
     }
-    
 }
 
-/*=====  End of TABLET  ======*/
+
+/*=====  End of Tablet  ======*/
+
+
 
 
 

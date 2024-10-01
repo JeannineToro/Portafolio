@@ -31,6 +31,7 @@
 }
 
 
+
 /*----------  SECCION PRESENTACION  ----------*/
 
 .presentacion{
@@ -38,9 +39,9 @@
 }
 
 .presentacion__foto{
+    border-radius: 50%;
     width: 210px;
     height: 210px;
-    border-radius: 50%;
 }
 
 .presentacion__titulo{
@@ -57,6 +58,7 @@
 .redes__img{
     font-size: 0.9rem;
 }
+
 
 
 /*----------  SECCION SOBRE MI  ----------*/
@@ -79,6 +81,8 @@
     padding-top: 30px;
     margin: 30px 170px;
 }
+
+
 
 /*----------  SECCIÓN HABILIDADES  ----------*/
 
@@ -171,6 +175,7 @@
 }
 
 
+
 /*----------  SECCIÓN AFICIONES  ----------*/
 
 .aficiones{
@@ -197,6 +202,7 @@
     width: 100px;
     text-align: center;
 }
+
 
 
 /*----------  SECCIÓN-FORMACIÓN  ----------*/
@@ -241,6 +247,7 @@
     font-weight: bolder;
     color: #595858;
 }
+
 
 
 /*----------  SECCIÓN PROYECTOS  ----------*/
@@ -312,7 +319,7 @@
 
 .contacto{
     background-color: #2dea8f1a;
-    height: 840px;
+    height: 880px;
 }
 
 .contacto__titulo{
@@ -411,6 +418,10 @@
     display: block;
 }
 
+#contador--caracteres.cambioColor{
+    color: red;
+}
+
 .contacto__boton{
     padding: 10px;
     width: 150px;
@@ -430,6 +441,45 @@
     background-color: #fff;
     color: #000;
 }
+
+
+
+
+/*----------  FOOTER  ----------*/
+
+.rodapie{
+    background-color: var(--color-fondo);
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*----------  ANIMACIÓN DE LA PÁGINA  ----------*/
+
+
+
+@keyframes appear {
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+section{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+
 
 
 /*=============================================
@@ -459,9 +509,13 @@
     .contacto__campo{
         width: 80%;
     }
-
+    
     .contacto__info{
         font-size: 1.1rem;
+    }
+
+    .contacto{
+        height: 960px;
     }
 }
 
@@ -528,8 +582,6 @@
 
 
 
-
-
 /*=============================================
 =            MOVIL            =
 =============================================*/
@@ -558,7 +610,7 @@
     }
 
     .redes__img{
-        font-size: 0.8rem;
+        font-size: 1.1rem;
     }
 
     .sobre-mi__texto{

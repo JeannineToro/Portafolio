@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estilos de la página -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/flexbox.css">
     <!-- Fuente del Proyecto Raleway -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
     <title>Portafolio</title>
+
     <!-- Icono de la pestaña -->
     <link rel="icon" href="img/coding.ico" type="image/x-icon">
 </head>
 <body>
+    
     <!-- Menú -->
     <header class="cabecera">
         <img class="cabecera__logo" src="img/logo.PNG" alt="Logo" height="55px">
@@ -28,7 +31,6 @@
         </nav>
     </header>
 
-
     <!-- Sección de Presentación -->
     <section class="presentacion">
         <img class="presentacion__foto" src="img/mi-foto.jpg" alt="Foto de perfil">
@@ -36,10 +38,11 @@
             <h2 class="presentacion__titulo">Hola, mi nombre es Jeannine Toro y construyo páginas web</h2>
             <p class="presentacion__subtitulo">Soy desarrolladora de software y actualmente estoy participando del proyecto Oracle ONE en Alura Latam.</p>
             <ul class="redes">
-                <li class="redes__img"><a href="">Github <img src="img/arrow.png" alt="Flecha"></a></li>
-                <li class="redes__img"><a href="">Linkedin <img src="img/arrow.png" alt="Flecha"></a></li>
-                <li class="redes__img"><a href="">Instagram <img src="img/arrow.png" alt="Flecha"></a></li>
-                <li class="redes__img"><a href="">Currículo <img src="img/arrow.png" alt="Flecha"></a></li>
+                <li class="redes__img"><a href="https://github.com/JeannineToro" target="_blank">Github <img src="img/arrow.png" alt="Flecha"></a></li>
+                <li class="redes__img"><a href="https://co.linkedin.com/in/jeannine-toro-12867b121" target="_blank">Linkedin <img src="img/arrow.png" alt="Flecha"></a></li>
+                <li class="redes__img"><a href="https://jeanninetoro.github.io/" target="_blank">Currículo <img src="img/arrow.png" alt="Flecha"></a></li>
+                <li class="redes__img"><a href="Portafolio.pdf" target="_blank">Portafolio PDF <img src="img/arrow.png" alt="Flecha"></a></li>
+                
             </ul>
         </div>
     </section>
@@ -197,31 +200,39 @@
             <h2 class="contacto__titulo">Contacto</h2>
             <p class="contacto__descripcion contacto__descripcion--primero">¿Quieres contactarme?</p>
             <p class="contacto__descripcion">Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.</p>
-            <form class="contacto__formulario">
+            <form class="contacto__formulario" action="https://formspree.io/f/mzzpnkaq"
+            method="POST">
                 <div class="contacto__campo">
-                    <input id="contacto__nombre" class="contacto__input" type="text" required spellcheck="false">
+                    <input id="contacto__nombre" class="contacto__input" type="text" name="nombre" data-tipo="nombre" required spellcheck="false">
                     <label class="contacto__label">Nombre</label>
                 </div>
                 <div class="input__mensaje input__mensaje--nombre"></div>
                 <div class="contacto__campo">
-                    <input id="contacto__email" class="contacto__input" type="email" required spellcheck="false">
+                    <input id="contacto__email" class="contacto__input" type="email" name="email" data-tipo="email" required spellcheck="false">
                     <label class="contacto__label">E-mail</label>
                 </div>
                 <div class="input__mensaje input__mensaje--email"></div>
                 <div class="contacto__campo">
-                    <input id="contacto__asunto" class="contacto__input" type="text" required spellcheck="false">
+                    <input id="contacto__asunto" class="contacto__input" type="text" name="asunto" data-tipo="asunto" required spellcheck="false">
                     <label class="contacto__label">Asunto</label>
                 </div>
                 <div class="input__mensaje input__mensaje--asunto"></div>
-                <textarea id="contacto__mensaje" class="contacto__campo contacto__campo--textarea" placeholder="Mensaje"></textarea>
-
+                <textarea id="contacto__mensaje" class="contacto__campo contacto__campo--textarea" name="mensaje" data-tipo="mensaje" placeholder="Mensaje"></textarea>
+                <p id="contador--caracteres">0/300</p>
                 <span class="contacto__info"><div class="signo">!</div> Debes llenar todos los campos</span>
-                <div class="contacto__mensaje--error"></div>
                 <button id="contacto__boton" class="contacto__boton" type="submit" disabled>Enviar</button>
             </form>
         </section>
     </main>
+
+    
+        <!-- footer -->
+    <footer class="rodapie">
+        <p class="rodapie__texto">Desarrollado por Jeannine Toro</p>
+        <p class="rodapie__fecha">&copy; 2024</p>
+    </footer>
 </body>
 
+<!-- Lógica de la página -->
 <script src="script.js"></script>
 </html>
