@@ -62,6 +62,7 @@ const mensajeErrorNombre = document.querySelector('.input__mensaje--nombre');
 const mensajeErrorEmail = document.querySelector('.input__mensaje--email');
 const mensajeErrorAsunto = document.querySelector('.input__mensaje--asunto');
 const contadorCaracteres = document.getElementById('contador--caracteres');
+const formulario = document.querySelector('.contacto__formulario');
 
 
 /*----------  HABILITAR BOTON AL NO TENER CAMPPOS VACÍOS  ----------*/
@@ -156,3 +157,10 @@ validarCampo(nombre, mensajeErrorNombre);
 validarCampo(asunto, mensajeErrorAsunto);
 validarCampo(email, mensajeErrorEmail);
 validarCampo(mensaje, contadorCaracteres);
+
+
+formulario.addEventListener('submit', e=>{
+    e.preventDefault();
+    formulario.submit();
+    formulario.reset();
+});
