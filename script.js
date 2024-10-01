@@ -159,6 +159,9 @@ validarCampo(email, mensajeErrorEmail);
 validarCampo(mensaje, contadorCaracteres);
 
 
+
+/*----------  Borrando los campos después de enviar el formulario  ----------*/
+
 formulario.addEventListener('submit', e=>{
     e.preventDefault();
     formulario.submit();
